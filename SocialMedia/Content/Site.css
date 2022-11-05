@@ -1,0 +1,55 @@
+﻿a{
+	text-decoration:none;
+}
+/* Styles for validation helpers*/
+
+.field-validation-error
+{
+	color: #ff0000;
+}
+
+.field-validation-valid
+{
+	display: none;
+}
+
+.input-validation-error
+{
+	border: 1px solid #ff0000;
+	background-color: #ffeeee;
+}
+
+.validation-summary-error
+{
+	font-weight: bold;
+	color: #ff0000;
+}
+
+.validation-summary-valid
+{
+	display: none;
+}
+.bodyRegister {
+	background-image: url("../Content/Images/Register_BG.jpg");
+	background-size: 700px;
+	background-position-y: 410px;
+	background-position-x: 410px;
+	background-repeat: no-repeat;
+	font-family: Comic Sans MS;
+}
+.bodyLogOn {
+	background-size: 1500px;
+	background-position-y: 110px;
+	font-family: Comic Sans MS;
+}
+
+filedset {
+	border: 1px solid #ddd;
+	padding: 0 1.4em 1.4em 1.4em;
+	margin: 0 0 1.5em 0;
+}
+
+legend {
+	font-size: 1.2em;
+	fot-weight: bold;
+}

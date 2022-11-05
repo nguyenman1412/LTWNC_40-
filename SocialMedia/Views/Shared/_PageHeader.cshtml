@@ -1,0 +1,21 @@
+﻿<div style="background-color:#778899;margin:-8px;">
+    <table style="width:100%;">
+        <tr>
+            <td style="width:25%;text-align:right;">
+                <img src="~/Content/Images/logo.jpg" alt="Logo" style="width:40px;height:30px;margin-top:9px;"/>
+                @Html.ActionLink("SocialMedia", "HomePage", null, new { style = "font-size:18px;color:#fff;font-family:andalus;vertical-align:4px;"})
+            </td>
+            <td style="width:50%">
+                <input type="text" placeholder="Search People" style="width:400px; height:24px; margin-top:5px"/>
+            </td>
+            <td>
+                <div>
+                    @Html.ActionLink("Home", "HomePage", null, new { style = "color:#fff;float:left;margin-top:5px" });
+                </div>
+                <div>
+                    @Html.ActionLink("Logout", "Logout","Security", null, new { style = "color:#fff;float:left;margin-left:20px;margin-top:5px" });
+                </div>
+            </td>
+        </tr>
+    </table>
+</div>

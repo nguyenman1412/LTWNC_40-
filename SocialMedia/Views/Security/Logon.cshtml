@@ -1,0 +1,45 @@
+﻿@model SocialMedia.ViewModels.LogonViewModel
+@{
+    ViewBag.Title = "Logon";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div>
+    <div style="margin-left:500px;">
+        <div>
+            <img src="~/Content/Images/logo.jpg" alt="Penguins logo" />
+        </div>
+
+        <div>
+            @Html.ValidationSummary()
+        </div>
+        <fieldset style="width:300px;">
+            <legend>Login Form</legend>
+            @using (Html.BeginForm())
+            {
+                <table>
+                    <tr>
+                        <td>@Html.LabelFor(c => c.Username, "Username:")</td>
+                        <td>@Html.TextBoxFor(c => c.Username)</td>
+                    </tr>
+
+                    <tr>
+                        <td>@Html.LabelFor(c => c.Password, "Password:")</td>
+                        <td>@Html.PasswordFor(c => c.Password)</td>
+                    </tr>
+
+                    <tr>
+                        <td></td>
+                        <td>
+                            <input type="submit" value="Login" />
+                            <input type="reset" value="Reset" />
+                        </td>
+                    </tr>
+                </table>
+            }
+        </fieldset>
+        <div style="margin-left: 130px;">
+            @Html.ActionLink("SignUp", "Register")
+        </div>
+        </div>
+    </div>

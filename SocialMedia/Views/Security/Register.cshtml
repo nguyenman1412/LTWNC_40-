@@ -1,0 +1,61 @@
+﻿@model SocialMedia.ViewModels.RegisterViewModel
+@{
+    ViewBag.Title = "Register";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<body class="bodyRegister">
+    <div style="margin-left:500px;">
+
+        <div>
+            <img src="~/Content/Images/logo.jpg" alt="PG Logo" />
+        </div>
+        @if (Model != null && !string.IsNullOrWhiteSpace(Model.Message))
+        {
+            <p style="font-weight:bold;">@Model.Message</p>
+        }
+        <div>
+            @Html.ValidationSummary()
+        </div>
+
+        <fieldset style="width:300px;">
+            <legend> Register form </legend>
+            @using (Html.BeginForm())
+            {
+                <Table>
+                    <tr>
+                        <td>@Html.LabelFor(c => c.FirstName, "FirstName:")</td>
+                        <td>@Html.TextBoxFor(c => c.FirstName)</td>
+                    </tr>
+                    <tr>
+                        <td>@Html.LabelFor(c => c.LastName, "LastName:")</td>
+                        <td>@Html.TextBoxFor(c => c.LastName)</td>
+                    </tr>
+                    <tr>
+                        <td>@Html.LabelFor(c => c.Email, "Email:")</td>
+                        <td>@Html.TextBoxFor(c => c.Email)</td>
+                    </tr>
+                    <tr>
+                        <td>@Html.LabelFor(c => c.Password, "Password:")</td>
+                        <td>@Html.PasswordFor(c => c.Password)</td>
+                    </tr>
+                    <tr>
+                        <td>@Html.LabelFor(c => c.ComfirmPassword, "ConfirmPassword:")</td>
+                        <td>@Html.PasswordFor(c => c.ComfirmPassword)</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <input type="submit" value="Register" />
+                            <input type="reset" value="Reset" />
+                        </td>
+                </Table>
+            }
+        </fieldset>
+
+
+        <div style="margin-left:100px;">
+            @Html.ActionLink("Redirect to Logon", "Logon")
+        </div>
+    </div>
+</body>
